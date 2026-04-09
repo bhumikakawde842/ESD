@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Machli Game Pattern</title>
+</head>
+<body>
+
+<input type="number" id="num" value="10">
+<button onclick="printPattern()">Print</button>
+
+<p id="output"></p>
+
+<script>
+function printPattern() {
+    let n = document.getElementById("num").value;
+    let result = "";
+
+    for (let i = 1; i <= n; i++) {
+
+        // Machhli part
+        for (let j = 1; j <= i; j++) {
+            result += i + " Machhli ";
+        }
+
+        // Pani me gyi part
+        for (let j = 1; j <= i; j++) {
+            result += "Pani me gyi ";
+        }
+
+        // Chappak part
+        for (let j = 1; j <= i; j++) {
+            result += "Chappak ";
+        }
+
+        result += "<br><br>";
+    }
+
+    document.getElementById("output").innerHTML = result;
+}
+</script>
+
+</body>
+</html>
